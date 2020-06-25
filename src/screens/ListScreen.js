@@ -4,11 +4,11 @@ import {View, StyleSheet, Text, FlatList} from 'react-native';
 
 export default function ListScreen(){
     const friends = [
-        {name: 'Avinash'},
-        {name: 'Avinash2'},
-        {name: 'Avinash3'},
-        {name: 'Avinash4'},
-        {name: 'Avinash5'}
+        {key:'1', name: 'Avinash'},
+        {key:'2', name: 'Avinash2'},
+        {key:'3', name: 'Avinash3'},
+        {key:'4', name: 'Avinash4'},
+        {key:'5', name: 'Avinash6'}
     ]
 
     return (
