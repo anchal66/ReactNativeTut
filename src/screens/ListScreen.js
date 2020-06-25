@@ -12,10 +12,10 @@ export default function ListScreen(){
     ]
 
     return (
-    <FlatList  data={friends}
-        renderItem={(element)=>{
-            //we get elemt as object of various property 
-            //to get value we have to element.item
+    <FlatList data={friends}
+        renderItem={({item})=>{
+            // using ES 6 feature to destauctre item from elemnt:
+            return <Text style={styles.listScreen}>{item.name}</Text>
         }} />
     )
 
