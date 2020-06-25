@@ -1,10 +1,23 @@
 import React from 'react';
-import {View, StyleSheet, Text} from 'react-native';
+import {View, StyleSheet, Text, FlatList} from 'react-native';
+
 
 export default function ListScreen(){
-    return <View>
-        <Text style={styles.listScreen}>List Screen</Text>
-    </View>
+    const friends = [
+        {name: 'Avinash'},
+        {name: 'Avinash2'},
+        {name: 'Avinash3'},
+        {name: 'Avinash4'},
+        {name: 'Avinash5'}
+    ]
+
+    return (
+    <FlatList  data={friends}
+        renderItem={(element)=>{
+            //we get elemt as object of various property 
+            //to get value we have to element.item
+        }} />
+    )
 
 }
 
