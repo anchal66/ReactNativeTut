@@ -8,11 +8,16 @@ export default function ListScreen(){
         {name: 'Avinash2'},
         {name: 'Avinash3'},
         {name: 'Avinash4'},
-        {name: 'Avinash5'}
+        {name: 'Avinash5'},
+        {name: 'Avinash6'},
+        {name: 'Avinash7'},
+        {name: 'Avinash8'},
     ]
 
     return (
     <FlatList 
+        horizontal={true}
+        showsHorizontalScrollIndicator={false}
         keyExtractor={friend=> friend.name}
         data={friends}
         renderItem={({item})=>{
@@ -25,6 +30,6 @@ export default function ListScreen(){
 
 const styles=StyleSheet.create({
     listScreen:{
-        fontSize: 40
+        marginVertical: 50
     }
 });
