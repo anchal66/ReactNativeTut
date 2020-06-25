@@ -4,15 +4,17 @@ import {View, StyleSheet, Text, FlatList} from 'react-native';
 
 export default function ListScreen(){
     const friends = [
-        {key:'1', name: 'Avinash'},
-        {key:'2', name: 'Avinash2'},
-        {key:'3', name: 'Avinash3'},
-        {key:'4', name: 'Avinash4'},
-        {key:'5', name: 'Avinash6'}
+        {name: 'Avinash'},
+        {name: 'Avinash2'},
+        {name: 'Avinash3'},
+        {name: 'Avinash4'},
+        {name: 'Avinash5'}
     ]
 
     return (
-    <FlatList data={friends}
+    <FlatList 
+        keyExtractor={friend=> friend.name}
+        data={friends}
         renderItem={({item})=>{
             // using ES 6 feature to destauctre item from elemnt:
             return <Text style={styles.listScreen}>{item.name}</Text>
