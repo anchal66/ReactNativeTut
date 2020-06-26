@@ -5,9 +5,15 @@ import ImgDetails from '../components/ImgDetails';
 export default ImgScreen = () => {
     return (
         <View>
-            <ImgDetails title="Forest" imgSrc={require('../../assets/images/beach.jpg')}/>
-            <ImgDetails title="Beach" imgSrc={require('../../assets/images/forest.jpg')}/>
-            <ImgDetails title="Mountains" imgSrc={require('../../assets/images/mountain.jpg')}/>
+            <ImgDetails title="Forest" 
+                imgSrc={require('../../assets/images/beach.jpg')}
+                score={9}/>
+            <ImgDetails title="Beach" 
+                imgSrc={require('../../assets/images/forest.jpg')}
+                score={5}/>
+            <ImgDetails title="Mountains" 
+                imgSrc={require('../../assets/images/mountain.jpg')}
+                score={7}/>
         </View>
     )
 }
