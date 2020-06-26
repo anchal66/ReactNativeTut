@@ -1,9 +1,12 @@
 import React from 'react';
-import {View, StyleSheet, Text} from 'react-native';
+import { View, StyleSheet, Text, Image } from 'react-native';
 
-export default ImgDetails =()=>{
+export default ImgDetails = (props) => {
     return (
-        <Text>Hello Deatils</Text>
+        <View>
+            <Text>{props.title}</Text>
+            <Image source={props.imgSrc}/>
+        </View>
     )
 }
 
