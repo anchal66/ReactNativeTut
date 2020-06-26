@@ -4,14 +4,16 @@ import HomeScreen from './src/screens/HomeScreen';
 import ComponentScreen from './src/screens/ComponentsScreen';
 import ListScreen from './src/screens/ListScreen';
 import ImgScreen from './src/screens/ImgScreen';
+import CounterScreen from './src/screens/CounterScreen';
 
 export default function App() {
   return (
     <View>
       <HomeScreen />
-      <ComponentScreen />
+      {/* <ComponentScreen />
       <ListScreen />
-      <ImgScreen />
+      <ImgScreen /> */}
+      <CounterScreen />
     </View>
   );
 }
