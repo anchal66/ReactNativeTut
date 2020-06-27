@@ -10,11 +10,23 @@ export default SquareScreen = () => {
     const [blue, setBlue] = useState(0);
     const [green, setGreen] = useState(0);
     console.log(red,blue, green);
+
+    const setColor= (color, change)=>{
+        if(color === 'red'){
+            if(red + change > 255 || red + change < 0){
+                return
+            }
+            else
+            {
+                setRed(red + change);
+            }
+        }
+    }
     return (
         <View>
             <ColorCounter
-             onIncrease={()=>{setRed(red + COLOR_CHANGE_VAL)}}
-             onDecrease={()=>{setRed(red - COLOR_CHANGE_VAL)}}
+             onIncrease={()=>{setColor('red', COLOR_CHANGE_VAL)}}
+             onDecrease={()=>{setColor('red', -1 * COLOR_CHANGE_VAL)}}
              color="Red"
             />
 
