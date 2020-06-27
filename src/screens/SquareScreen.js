@@ -10,12 +10,18 @@ export default SquareScreen = () => {
         //action = {colorToChange: red|| green || blue, amount: 15 || -15}
         switch (action.colorToChange) {
             case 'red':
-                return {...state, red: state.red + action.amount}
+                return state.red+ action.amount > 255 || state.red + action.amount < 0
+                    ? state : 
+                    {...state, red: state.red + action.amount};
             //this will copy orignal state receved and override new red property
             case 'green':
-                return {...state, green: state.green + action.amount}
+                return state.green+ action.amount > 255 || state.green + action.amount < 0
+                    ? state : 
+                    {...state, green: state.green + action.amount};
             case 'blue':
-                return {...state, blue: state.blue + action.amount}
+                return state.blue+ action.amount > 255 || state.blue + action.amount < 0
+                    ? state : 
+                    {...state, blue: state.blue + action.amount};
             default: 
                 return state;
         }
