@@ -7,6 +7,7 @@ import ImgScreen from './src/screens/ImgScreen';
 import CounterScreen from './src/screens/CounterScreen';
 import ColorScreen from './src/screens/ColorScreen';
 import SquareScreen from './src/screens/SquareScreen';
+import TextScreen from './src/screens/TextScreen';
 
 export default function App() {
   return (
@@ -17,7 +18,8 @@ export default function App() {
       <ImgScreen /> */}
       {/* <CounterScreen /> */}
       {/* <ColorScreen /> */}
-      <SquareScreen />
+      {/* <SquareScreen /> */}
+      <TextScreen />
     </View>
   );
 }
