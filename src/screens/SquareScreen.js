@@ -12,14 +12,23 @@ export default SquareScreen = () => {
     console.log(red,blue, green);
 
     const setColor= (color, change)=>{
-        if(color === 'red'){
-            if(red + change > 255 || red + change < 0){
-                return
-            }
-            else
-            {
-                setRed(red + change);
-            }
+        switch(color){
+            case 'red':
+                red + change > 255 || red + change < 0 ? null : setRed(red + change);
+                // if(red + change > 255 || red + change < 0){
+                //     return
+                // }
+                // else
+                // {
+                //     setRed(red + change);
+                // }
+                return;
+                case 'green':
+                    green + change > 255 || green + change < 0 ? null : setGreen(green + change);
+                    return;
+                case 'blue':
+                    blue + change > 255 || blue + change < 0 ? null : setBlue(blue + change);
+                     return;
         }
     }
     return (
@@ -31,14 +40,14 @@ export default SquareScreen = () => {
             />
 
             <ColorCounter
-             onIncrease={()=>{setBlue(blue + COLOR_CHANGE_VAL)}}
-             onDecrease={()=>{setBlue(blue - COLOR_CHANGE_VAL)}}
+             onIncrease={()=>{setColor('blue', COLOR_CHANGE_VAL)}}
+             onDecrease={()=>{setColor('blue', COLOR_CHANGE_VAL)}}
              color="Blue"
             />
             <ColorCounter
              color="Green"
-             onIncrease={()=>{setGreen(green + COLOR_CHANGE_VAL)}}
-             onDecrease={()=>{setGreen(green - COLOR_CHANGE_VAL)}}
+             onIncrease={()=>{setColor('green', COLOR_CHANGE_VAL)}}
+             onDecrease={()=>{setColor('green', COLOR_CHANGE_VAL)}}
             />
             <View 
             style={{height:150, width:150,
