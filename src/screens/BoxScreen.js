@@ -5,6 +5,8 @@ export default TextScreen = () => {
     return (
         <View style={styles.viewStyle}>
             <Text style={styles.textStyle}>Boxy</Text>
+            <Text style={styles.textStyle}>Boxy2 </Text>
+            <Text style={styles.textStyle}>Boxy3</Text>
         </View>
     )
 }
@@ -12,14 +14,19 @@ export default TextScreen = () => {
 const styles = StyleSheet.create({
     viewStyle:{
         borderWidth:3,
-        borderColor: 'black'
+        borderColor: 'black',
+        alignItems: 'center',
+        flexDirection: 'row',
+        justifyContent:'center'
     },
-    textStyle:{
-        borderWidth:1,
+    textStyle1:{
+        borderWidth:3,
         borderColor: 'red',
-        marginVertical: 20,
-        marginHorizontal: 20,
-        padding:10
-
+    },
+    textStyle2:{
+        borderWidth:3,
+        borderColor: 'red',
+        flex:1,
+        alignSelf:'flex-end'
     }
 });
